@@ -27,7 +27,7 @@ function Header() {
 
         <div className="navMenu">
             <div className="content-items">
-                <img src={myHR} className="nav-icon" alt="logo" />
+                <img src={myHR} className="nav-notification" alt="logo" />
                 <img src={notifications} className="nav-logo" alt="logo" />
                 <img src={profile} className="nav-profile" alt="logo" />
             </div>
