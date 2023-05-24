@@ -41,6 +41,8 @@
 .editor {
   min-width: 800px;
   min-height: 80vh;
+  overflow: auto;
+  max-height: 80vh;
 }
 
 .cardItem {
