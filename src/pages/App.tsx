@@ -2,9 +2,11 @@ import React from 'react';
 import './App.css';
 import Header from '../comps/Header/Header'
 
-import { BlockNoteEditor } from "@blocknote/core";
+import { useState } from "react";
+import { BlockNoteEditor, Block } from "@blocknote/core";
 import { BlockNoteView, useBlockNote } from "@blocknote/react";
 import "@blocknote/core/style.css";
+
 import {run} from "../utils/process";
 
 import chevronDown from '../images/chevron-down.svg';
@@ -13,12 +15,44 @@ import search from '../images/search.svg';
 import plus from '../images/plus.svg';
 import blockQuote from '../images/block-quote.svg';
 
+const initialContent: string | null = localStorage.getItem("editorContent");
+
 
 function App() {
-    // Creates a new editor instance.
-    const editor: BlockNoteEditor | null = useBlockNote({});
-     run();
+  // Stores the editor's contents as an array of Block objects.
+  const [blocks, setBlocks] = useState<Block[] | null>(null);
+  
+  // Creates a new editor instance.
+  const editor: BlockNoteEditor | null = useBlockNote({
+    initialContent: initialContent ? JSON.parse(initialContent) : undefined,
+
+    // Listens for when the editor's contents change.
+    onEditorContentChange: (editor: BlockNoteEditor) => {
+      localStorage.setItem(
+        "editorContent",
+        JSON.stringify(editor.topLevelBlocks)
+      );
+      // Converts the editor's contents to an array of Block objects.
+      setBlocks(editor.topLevelBlocks)
+    }
+  });
+
+
+// // Definition
+// class BlockNoteEditor {
+//     public insertBlocks(
+//       blocksToInsert: PartialBlock[],
+//       referenceBlock: BlockIdentifier,
+//       placement: "before" | "after" | "nested" = "before"
+//     ): void;
+//   }
+  
+//   // Usage
+//   editor.insertBlocks(blocksToInsert, referenceBlock, placement)
+
+  run();
     //console.log(openAIRes)
+
   return (
     <div className="App">
       <Header/>
@@ -49,6 +83,7 @@ function App() {
         </div>
         <div className="editor card">
           <BlockNoteView editor={editor} />;
+          <div className="cardItem"><p>{JSON.stringify(blocks, null, 2)}</p></div>
         </div>
       </div>
     </div>
