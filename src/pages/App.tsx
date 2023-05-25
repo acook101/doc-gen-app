@@ -7,21 +7,22 @@ import { BlockNoteEditor, Block } from "@blocknote/core";
 import { BlockNoteView, useBlockNote } from "@blocknote/react";
 import "@blocknote/core/style.css";
 
-import {mockRun} from "../utils/process";
+import {run} from "../utils/process";
 
 import chevronDown from '../images/chevron-down.svg';
 import document from '../images/document.svg';
 import search from '../images/search.svg';
 import plus from '../images/plus.svg';
 import blockQuote from '../images/block-quote.svg';
+import { InputField } from './Text';
 
 const initialContent: string | null = localStorage.getItem("editorContent");
-
+// run();
 
 function App() {
   // Stores the editor's contents as an array of Block objects.
   const [blocks, setBlocks] = useState<Block[] | null>(null);
-  const mockOutput = mockRun;
+  
   // Creates a new editor instance.
   const editor: BlockNoteEditor | null = useBlockNote({
     initialContent: initialContent ? JSON.parse(initialContent) : undefined,
@@ -56,6 +57,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
+      <InputField></InputField>
       <div className="content-body">
         <div className="file-explorer card">
           <div className="cardItem card-category">
@@ -79,9 +81,10 @@ function App() {
             <img src={blockQuote} className="cardItemIcon" alt="logo" />
             <p>Drafts</p>
           </div>
-
         </div>
+
         <div className="editor card">
+          
           <BlockNoteView editor={editor} />;
           <div className="cardItem"><p>{JSON.stringify(blocks, null, 2)}</p></div>
         </div>

@@ -1,69 +1,38 @@
 
 
-import { OpenAI } from "langchain/llms/openai";
-import {
-    ChatPromptTemplate,
-    HumanMessagePromptTemplate,
-    PromptTemplate,
-    SystemMessagePromptTemplate,
-  } from "langchain/prompts";
-  
+// import { OpenAI } from "langchain/llms/openai";
+// import {
+//     ChatPromptTemplate,
+//     HumanMessagePromptTemplate,
+//     PromptTemplate,
+//     SystemMessagePromptTemplate,
+//   } from "langchain/prompts";
 
- const openAIKey = "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";
+const { Configuration, OpenAIApi } = require("openai");
 
- export const mockRun = async() =>{
-  return "mock response";
- }
+const openAIKey = "Will update";
 
-//  const run = async () => {
 
-//     // We can also use the `fromTemplate` method to create a `PromptTemplate` object.
-//     const prompt = PromptTemplate.fromTemplate(
-//       "Generate documentation for my project {project}?"
-//     );
-//     // TODO: Need to connect project with the input in ui
-//     const response = await prompt.format({ project: "auto documentation generation" });
-//     console.log({ responseB: response });
-//     /*
-//     {
-//       response: 'Generate documentation for my project auto documentation generatior?'
-//     }
-//     */
-//     const model = new OpenAI({
-//       temperature: 0.9,
-//       openAIApiKey: openAIKey, // In Node.js defaults to process.env.OPENAI_API_KEY, needs to store it in env file
-//     });
-//     // call response 
-//     const res = await model.call(
-//       response
-//     );
-//     console.log(res);
+export const run = async (inputFAQ: string) => {
+  // const configuration = new Configuration({
+  //   apiKey: openAIKey,
+  // });
+  // const openai = new OpenAIApi(configuration);
 
-//     // For chat models, we provide a `ChatPromptTemplate` class that can be used to format chat prompts.
-//     const chatPrompt = ChatPromptTemplate.fromPromptMessages([
-//       SystemMessagePromptTemplate.fromTemplate(
-//         "This tool can translate {input_language} to {output_language}."
-//       ),
-//       HumanMessagePromptTemplate.fromTemplate("{text}"),
-//     ]);
-  
-//     // The result can be formatted as a string using the `format` method.
-//     const responseC = await chatPrompt.format({
-//       input_language: "English",
-//       output_language: "Chinese",
-//       text: "// Generated documented",
-//     });
-//     // console.log({ responseC });
-
-  
-//     // The result can also be formatted as a list of `ChatMessage` objects by returning a `PromptValue` object and calling the `toChatMessages` method.
-//     // More on this below.
-//     const responseD = await chatPrompt.formatPromptValue({
-//       input_language: "English",
-//       output_language: "French",
-//       text: "I love programming.",
-//     });
-//     const messages = responseD.toChatMessages();
-//     // console.log({ messages });
-
-//   };
+  // //console.log("inputFaQ:", inputFAQ)
+  // // const inputFAQ = "amazon"
+  // const response = await openai.createCompletion({
+  //   // model: "text-curie-001",
+  //   model: "text-davinci-003",
+  //   prompt: `could you please generate a documentation about ${inputFAQ}?`,
+  //   temperature: 0,
+  //   max_tokens: 100,
+  //   top_p: 1,
+  //   frequency_penalty: 0.0,
+  //   presence_penalty: 0.0,
+  //   // stop: ["\n"],
+  // });
+  // console.log(response.data.choices[0].text)
+  // return response.data.choices[0].text;
+  return inputFAQ;
+}
