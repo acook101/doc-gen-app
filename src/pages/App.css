@@ -17,11 +17,48 @@
   background-color: #F5F7F9;
   /* min-height: 100vh; */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px 70px;
+}
+
+.card {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 10px 20px;
+  text-align: start;
+  min-width: 250px;
+  margin-right: 40px;
+}
+
+.file-explorer {
+
+}
+
+.editor {
+  min-width: 800px;
+  min-height: 80vh;
+  overflow: auto;
+  max-height: 80vh;
+}
+
+.cardItem {
+  display: flex;
+  align-items: center;
+
+}
+
+.cardItem h3 {
+  width: 100%;
+}
+
+.cardItemIcon {
+  height: 15px;
+  width: 15px;
+  margin-right: 5px;
 }
 
 .App-link {
