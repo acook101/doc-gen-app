@@ -7,7 +7,7 @@ import { BlockNoteEditor, Block } from "@blocknote/core";
 import { BlockNoteView, useBlockNote } from "@blocknote/react";
 import "@blocknote/core/style.css";
 
-import {run} from "../utils/process";
+import {mockRun} from "../utils/process";
 
 import chevronDown from '../images/chevron-down.svg';
 import document from '../images/document.svg';
@@ -21,7 +21,7 @@ const initialContent: string | null = localStorage.getItem("editorContent");
 function App() {
   // Stores the editor's contents as an array of Block objects.
   const [blocks, setBlocks] = useState<Block[] | null>(null);
-  
+  const mockOutput = mockRun;
   // Creates a new editor instance.
   const editor: BlockNoteEditor | null = useBlockNote({
     initialContent: initialContent ? JSON.parse(initialContent) : undefined,
@@ -50,7 +50,7 @@ function App() {
 //   // Usage
 //   editor.insertBlocks(blocksToInsert, referenceBlock, placement)
 
-  run();
+  //run();
     //console.log(openAIRes)
 
   return (
