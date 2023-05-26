@@ -7,6 +7,7 @@ import document from '../images/document.svg';
 import askQuestion from '../images/question.png';
 import search from '../images/search.svg';
 import plus from '../images/plus.svg';
+import aiLogo from '../images/ai-logo.png';
 import blockQuote from '../images/block-quote.svg';
 import { InputField } from './InputField';
 
@@ -76,13 +77,17 @@ function App() {
       <div className="content-body">
 
         <div className="editor card">
+          <div className="editor__wrapper">
           <InputField></InputField>
+          </div>
         </div>
 
         <div className="sidebar">
           <div className="sidebar-main">
-            <h3>How to write a great PRFAQ</h3>
-            <p>Tailor your press release to the customer problem you are trying to solve. Each press release is different, but here is a suggested outline. For help with your first draft, use the PR/FAQ Writing Tool. For a downloadable quick-start guide with this outline, see the Working Backwards Document Guide.</p>
+          <div className="sidebar-title"><img src={aiLogo} /> <h3>How to write a great PRFAQ</h3></div>
+          <p>Tailor your press release to the customer problem you are trying to solve. Each press release is different, but here is a suggested outline. For help with your first draft, use the PR/FAQ Writing Tool. For a downloadable quick-start guide with this outline, see the Working Backwards Document Guide.</p>
+         
+          <p className="sidebar-tip"><b>Pro Tip:</b> Effective Press Releases contain a clear, customer-focused problem or opportunity, rich customer quotes, and details about the customer experience. </p>    
           </div>
           <div className="sidebar-question">
             <img src={askQuestion} />

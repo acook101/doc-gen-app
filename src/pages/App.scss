@@ -35,11 +35,30 @@
 
 .sidebar-main {
   flex-grow: 1;
-  padding: 30px;
+  padding: 20px 20px;
 
   p {
     padding: 0;
     margin: 0;
+    padding-left: 35px;
+    line-height: 1.6em;
+    & b {
+      color: #F1795C;
+    }
+  }
+  .sidebar-tip {
+    color: #3e5060;
+    margin-top: 10px;
+  }  
+}
+
+.sidebar-title {
+  display: flex;
+  margin-bottom: 5px;
+  & img {
+    margin-right: 10px;
+    height: 25px;
+    width: 25px;
   }
 }
 
@@ -56,7 +75,7 @@
 .editor {
   background: white;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   border: 1px solid rgba(0,0,0,0.1);
   padding: 10px 30px;
   text-align: start;
@@ -64,6 +83,14 @@
   flex-grow: 1;  
   border: 1px solid #D1D5DA;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.editor__wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+  width: 60%;
+  margin: 20px auto;
 }
 
 .cardItem {

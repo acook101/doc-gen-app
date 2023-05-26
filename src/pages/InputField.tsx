@@ -67,7 +67,7 @@ export const InputField = () => {
              <TextField
               id="input"
               className="document-section_text-field"
-              placeholder="Describe in a one-page document the project vision using customer-centric language." 
+              placeholder="Write a brief description of the project vision and customer benefit for a new product, feature, or service." 
               sx={{ m: 1, width: "40ch" }}
               variant="standard"
               color='secondary'
@@ -99,11 +99,6 @@ export const InputField = () => {
           </IconButton>
         </div>
       </div>
-{/* 
-        <Button className="prompt-btn" variant="contained" onClick={handleFaqClick}>
-          Get FAQ!
-        </Button>
-        <br /> */}
       <BlockNoteView editor={editor} />
       {/* <div className="cardItem"><p>`${JSON.stringify(response, null, 2)}`</p></div> */}
     </>
