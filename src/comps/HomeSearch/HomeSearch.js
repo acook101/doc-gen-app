@@ -10,8 +10,8 @@ function HomeSearch() {
           <input className="home-search__field" placeholder="What do you want to do or find today?"></input>
           <ul className="favorites">
             <li className="favorites__item favorites__label">Favorites:</li>
-            <li className="favorites__item">Time Off</li>
-            <li className="favorites__item">Wiki</li>
+            <li className="favorites__item"><a href="/editor">Create New Doc</a></li>
+            <li className="favorites__item"><a href="/">Wiki</a></li>
           </ul>
         </div>
       </div>
