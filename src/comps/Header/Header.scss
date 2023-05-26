@@ -65,7 +65,10 @@
 
       &--badge {
         background-color: $neutral-10;
-        padding: 5px;
+        padding: 5px 8px;
+        color: #394451;
+        font-weight: 500;
+        border-radius: 4px;
 
         &::after {
           display: none;
