@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import Header from '../comps/Header/Header'
 
 import "@blocknote/core/style.css";

@@ -1,5 +1,7 @@
+@import "../styles/shared.scss";
+
 .App {
-  text-align: center;
+  font-family: $fonts-sans-serif;
 }
 
 .App-logo {
@@ -14,7 +16,7 @@
 }
 
 .content-body{
-  background-color: #F5F7F9;
+  background-color: $colors-bg-gray;
   /* min-height: 100vh; */
   display: flex;
   font-size: calc(10px + 2vmin);
@@ -73,4 +75,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Home {
+  background-color: $colors-bg-gray;
+  min-height: 100vh;
+}
+
+.home-bottom {
+  height: 1000px;
+  background-image: url('../images/home-bottom.png');
+  background-size: $grid-max-width auto;
+  background-repeat: no-repeat;
+  background-position: top center;
+  margin-top: 20px;
 }
