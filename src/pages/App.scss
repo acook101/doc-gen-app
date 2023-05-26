@@ -1,5 +1,7 @@
+@import "../styles/shared.scss";
+
 .App {
-  text-align: center;
+  font-family: $fonts-sans-serif;
 }
 
 .App-logo {
@@ -14,7 +16,7 @@
 }
 
 .content-body{
-  background-color: #F5F7F9;
+  background-color: $colors-bg-gray;
   /* min-height: 100vh; */
   display: flex;
   font-size: calc(10px + 2vmin);

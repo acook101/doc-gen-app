@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import Header from '../comps/Header/Header'
-
+import EditorToolbar from '../comps/EditorToolbar/EditorToolbar';
 import { useState } from "react";
 import { BlockNoteEditor, Block } from "@blocknote/core";
 import { BlockNoteView, useBlockNote } from "@blocknote/react";
@@ -56,6 +56,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
+      <EditorToolbar/>
       <div className="content-body">
         <div className="file-explorer card">
           <div className="cardItem card-category">
