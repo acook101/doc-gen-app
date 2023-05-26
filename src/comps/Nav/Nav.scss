@@ -30,8 +30,7 @@
     width: 100%;
     position: relative;
     z-index: 2;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-
+    border-bottom: 1px solid $colors-border;
 }
 
 .content-items {
@@ -92,6 +91,7 @@
 .navSubTitle {
     margin-top: 5px;
 }
+
 .navMenu, .navSubTitle {
     font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
     float: right;
@@ -113,23 +113,3 @@
     font-size: 14px;
     color: #0a2540;
 }
-
-/* 
-.navMenu, .navSubTitle {
-    font-size: 12px;
-    line-height: 1;
-    font-weight: 400;
-    letter-spacing: -.01em;
-    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-    float: right;
-}
-
-.navMenuItems {
-    float: left;
-    padding-top: 40px;
-    list-style: none;
-}
-
-.navMenuItem:hover {
-    color: #FF581B;
-} */

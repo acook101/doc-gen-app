@@ -53,24 +53,29 @@ export const InputField = () => {
 
   return (
     <>
-      <h3 color="blue">Please enter brief description of your project</h3>
-      <span>
-        <TextField
-          id="input"
-          sx={{ m: 1, width: "40ch" }}
-          variant="standard"
-          onChange={handleChange}
-          value={state}
-        >
-          {" "}
-        </TextField>
-      </span>
-      <div>
+
+      <div className="intro-prompt">
+      <h2 className="document-section__title">What is your PRFAQ about?</h2>
+        <span>
+          <TextField
+            id="input"
+            sx={{ m: 1, width: "40ch" }}
+            variant="standard"
+            onChange={handleChange}
+            value={state}
+          >
+            {" "}
+          </TextField>
+        </span>
+      </div>
+
+      <div className="document-section">
         <Button variant="contained" onClick={handleClick}>
           Get Context!
         </Button>
-        </div>
-        <div>
+      </div>
+      <div className="document-section">
+        <h2 className="document-section__title">FAQs</h2>
         <Button variant="contained" onClick={handleFaqClick}>
           Get FAQ!
         </Button>

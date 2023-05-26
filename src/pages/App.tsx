@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.scss';
-import Header from '../comps/Header/Header'
-
+import Header from '../comps/Header/Header';
 import "@blocknote/core/style.css";
-
 import chevronDown from '../images/chevron-down.svg';
 import document from '../images/document.svg';
+import askQuestion from '../images/question.png';
 import search from '../images/search.svg';
 import plus from '../images/plus.svg';
 import blockQuote from '../images/block-quote.svg';
@@ -75,33 +74,22 @@ function App() {
     <div className="App">
       <Header/>
       <div className="content-body">
-        <div className="file-explorer card">
-          <div className="cardItem card-category">
-            <h3>PXF/UX/Research</h3>
-            <img src={chevronDown} className="cardItemIcon" alt="logo" />
-          </div>
-          <div className="cardItem">
-            <img src={document} className="cardItemIcon" alt="logo" />
-            <p>Recent documents</p>
-          </div>
-          <div className="cardItem">
-            <img src={search} className="cardItemIcon" alt="logo" />
-            <p>Search templates</p>
-          </div>
-
-          <div className="cardItem card-category">
-            <h3>Folders</h3>
-            <img src={plus} className="cardItemIcon" alt="logo" />
-          </div>
-          <div className="cardItem">
-            <img src={blockQuote} className="cardItemIcon" alt="logo" />
-            <p>Drafts</p>
-          </div>
-        </div>
 
         <div className="editor card">
-    <InputField></InputField>
+          <InputField></InputField>
         </div>
+
+        <div className="sidebar">
+          <div className="sidebar-main">
+            <h3>How to write a great PRFAQ</h3>
+            <p>Tailor your press release to the customer problem you are trying to solve. Each press release is different, but here is a suggested outline. For help with your first draft, use the PR/FAQ Writing Tool. For a downloadable quick-start guide with this outline, see the Working Backwards Document Guide.</p>
+          </div>
+          <div className="sidebar-question">
+            <img src={askQuestion} />
+          </div>
+        </div>
+
+
       </div>
     </div>
 

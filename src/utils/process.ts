@@ -1,6 +1,6 @@
 const { Configuration, OpenAIApi } = require("openai");
 
-const openAIKey = "Update here";
+const openAIKey = "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";
 
 // function used to generate documentation
 export const generateDoc = async (inputDoc: string) => {
