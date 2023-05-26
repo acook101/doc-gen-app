@@ -240,3 +240,8 @@
     padding: 0;
   }
 }
+
+.rest-of-document {
+  opacity: 0;
+  transition: .5s ease-in-out;
+}

@@ -93,6 +93,8 @@ export const InputField = () => {
 
       <BlockNoteView editor={editor} />
 
+      <div className="rest-of-document">
+
       <div className="document-section document-section--faqs">
         <h2 className="document-section__title">Customer FAQs</h2>
         <p className="document-section__description">Good FAQs help us vet an idea. While we may fall in love with the idea in the Press Release, the FAQs help us get into the details of how it will work for customers and how we'd execute.</p>
@@ -141,6 +143,8 @@ export const InputField = () => {
             </li>
           </ul>
         </div>
+      </div>
+
       </div>
 
 
