@@ -2,43 +2,18 @@ import React from 'react';
 import './App.css';
 import Header from '../comps/Header/Header'
 
-import { useState } from "react";
-import { BlockNoteEditor, Block } from "@blocknote/core";
-import { BlockNoteView, useBlockNote } from "@blocknote/react";
 import "@blocknote/core/style.css";
-
-import {run} from "../utils/process";
 
 import chevronDown from '../images/chevron-down.svg';
 import document from '../images/document.svg';
 import search from '../images/search.svg';
 import plus from '../images/plus.svg';
 import blockQuote from '../images/block-quote.svg';
-import { InputField } from './Text';
-
-const initialContent: string | null = localStorage.getItem("editorContent");
+import { InputField } from './InputField';
 
 function App() {
 
-  // Stores the editor's contents as an array of Block objects.
-  const [blocks, setBlocks] = useState<Block[] | null>(null);
 
-  //Last attempt at Import AI output content into blocks
-  // const [mockRun, insertBlocks] = useState<Block[] | null>(null);
-  
-
-  // Creates a new editor instance.
-  const editor: BlockNoteEditor | null = useBlockNote({
-    // Listens for when the editor's contents change.
-    onEditorContentChange: (editor: BlockNoteEditor) => 
-      // Converts the editor's contents to an array of Block objects.
-      setBlocks(editor.topLevelBlocks),
-      // insertBlocks(mockRun)
-  })
-
-
-
-  
   /* Discard if not hepful context.. 
 
   // Creates a new editor instance.
@@ -96,14 +71,9 @@ function App() {
   });
 */
 
-
-  //run();
-    //console.log(openAIRes)
-
   return (
     <div className="App">
       <Header/>
-      <InputField></InputField>
       <div className="content-body">
         <div className="file-explorer card">
           <div className="cardItem card-category">
@@ -130,9 +100,7 @@ function App() {
         </div>
 
         <div className="editor card">
-          
-          <BlockNoteView editor={editor} />;
-          <div className="cardItem"><p>{JSON.stringify(blocks, null, 2)}</p></div>
+    <InputField></InputField>
         </div>
       </div>
     </div>
