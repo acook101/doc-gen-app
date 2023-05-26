@@ -141,8 +141,8 @@
   background: rgba(0,0,0,0.1);
 }
 
-.document-section, .intro-prompt {
-  margin-bottom: 60px;
+.document-section {
+  margin-bottom: 40px;
 }
 
 .document-section__prompt-area {
@@ -157,6 +157,15 @@
     margin-right: 5px;
   }
 }
+
+.editor__wrapper {
+  & div {
+    & div.ProseMirror {
+      padding: 0;
+    }
+  }
+}
+
 
 .document-section_text-field {
   & div::before, div::after {

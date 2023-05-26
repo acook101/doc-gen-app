@@ -90,6 +90,7 @@ export const InputField = () => {
           <div className="ds-container__line"></div>
         </div>
       </div>
+      <BlockNoteView editor={editor} />
       <div className="document-section">
         <h2 className="document-section__title">FAQs</h2>
         <div className="ds-generate__container left-align">
@@ -99,7 +100,6 @@ export const InputField = () => {
           </IconButton>
         </div>
       </div>
-      <BlockNoteView editor={editor} />
       {/* <div className="cardItem"><p>`${JSON.stringify(response, null, 2)}`</p></div> */}
     </>
   );
