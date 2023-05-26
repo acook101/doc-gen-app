@@ -76,3 +76,17 @@
     transform: rotate(360deg);
   }
 }
+
+.Home {
+  background-color: $colors-bg-gray;
+  min-height: 100vh;
+}
+
+.home-bottom {
+  height: 1000px;
+  background-image: url('../images/home-bottom.png');
+  background-size: $grid-max-width auto;
+  background-repeat: no-repeat;
+  background-position: top center;
+  margin-top: 20px;
+}

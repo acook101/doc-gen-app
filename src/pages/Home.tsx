@@ -1,15 +1,17 @@
 import React from 'react';
-import Header from '../comps/Header/Header'
+import Header from '../comps/Header/Header';
+import Nav from '../comps/Nav/Nav';
 import HomeSearch from '../comps/HomeSearch/HomeSearch';
+import homeBottom from '../../images/home-bottom.png';
 
 function Home() {
   return (
     <div className="App">
-      <Header/>  
-      <HomeSearch/>
-      
-      AtoZ Home Page<br />
-      <a href="/Editor">To the Editor!</a>
+      <div className="Home">
+        <Nav/>  
+        <HomeSearch/>
+        <div className="home-bottom"></div>
+      </div>
     </div>
   );
 }

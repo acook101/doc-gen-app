@@ -7,9 +7,9 @@ function HomeSearch() {
       <div className="home-search-wrapper">
         <div className="home-search">
           <h2>Good Morning, Adam!</h2>
-          <input></input>
+          <input className="home-search__field" placeholder="What do you want to do or find today?"></input>
           <ul className="favorites">
-            <li className="favorites__label">Favorites</li>
+            <li className="favorites__item favorites__label">Favorites:</li>
             <li className="favorites__item">Time Off</li>
             <li className="favorites__item">Wiki</li>
           </ul>

@@ -3,10 +3,35 @@
 .home-search-wrapper {
   width: 100%;
   padding: 100px 0;
+  background: white;
 }
 
 .home-search {
   max-width: $grid-max-width;
   width: 100%;
   padding: 20px $grid-gutter;
+  margin: 0 auto;
+
+  &__field {
+    width: 600px;
+    padding: 15px 15px 15px 40px;
+    border: 1px solid;
+    border-radius: 8px;
+    background: no-repeat 10px center url('../../images/ai-logo.png');
+  }
 }
+
+.favorites {
+  font-size: 13px;
+  padding-top: 10px;
+
+  &__label {
+    font-weight: bold;
+  }
+
+  &__item {
+    float: left;
+    margin-right: 8px;
+  }
+}
+
