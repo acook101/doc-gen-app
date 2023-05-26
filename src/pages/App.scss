@@ -88,8 +88,8 @@
 .editor__wrapper {
   display: flex;
   flex-direction: column;
-  max-width: 65%;
-  width: 65%;
+  max-width: 80%;
+  width: 80%;
   margin: 20px auto;
 }
 
@@ -142,7 +142,31 @@
 }
 
 .document-section {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+
+  &__title {
+    margin-bottom: 15px;
+  }
+  
+  &__description {
+    font-size: 14px;
+    line-height: 145%;
+    color: rgba(0,0,0,.6);
+    margin: 0 0 25px 0;
+  }
+
+  &--faqs {
+
+  }
+
+  &__auto-add {
+    li {
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 145%;
+      color: rgba(0,0,0,1);
+    }
+  }
 }
 
 .document-section__prompt-area {
@@ -216,4 +240,3 @@
     padding: 0;
   }
 }
-

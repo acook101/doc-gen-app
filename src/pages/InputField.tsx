@@ -90,16 +90,60 @@ export const InputField = () => {
           <div className="ds-container__line"></div>
         </div>
       </div>
+
       <BlockNoteView editor={editor} />
-      <div className="document-section">
-        <h2 className="document-section__title">FAQs</h2>
+
+      <div className="document-section document-section--faqs">
+        <h2 className="document-section__title">Customer FAQs</h2>
+        <p className="document-section__description">Good FAQs help us vet an idea. While we may fall in love with the idea in the Press Release, the FAQs help us get into the details of how it will work for customers and how we'd execute.</p>
         <div className="ds-generate__container left-align">
-          <IconButton className="prompt-btn" variant="contained" onClick={handleFaqClick}>
-          <img src={plus} className="generate-logo" alt="logo" />
-          <h3>Add FAQs</h3>
-          </IconButton>
+          <ul className="document-section__auto-add">
+            <li><input type="checkbox" checked /> Add an FAQ about what this product does that the customer couldn't do before</li>
+            <li><input type="checkbox" checked /> Add an FAQ about how the customer will find out about this new product</li>
+            <li>
+              <IconButton className="prompt-btn" variant="contained" onClick={handleFaqClick}>
+                <img src={plus} className="generate-logo" alt="logo" />
+                <h3>Generate Customer FAQs</h3>
+              </IconButton>
+            </li>
+          </ul>
         </div>
       </div>
+
+      
+
+      <div className="document-section document-section--faqs">
+        <h2 className="document-section__title">Internal FAQs</h2>
+        <p className="document-section__description">Internal/Stakeholder FAQs are internal business questions that other leaders, partner teams, or other Amazonians may ask you.</p>
+        <div className="ds-generate__container left-align">
+          <ul className="document-section__auto-add">
+            <li><input type="checkbox" checked /> Add an internal FAQ about our North Star Vision</li>
+            <li>
+              <IconButton className="prompt-btn" variant="contained" onClick={handleFaqClick}>
+                <img src={plus} className="generate-logo" alt="logo" />
+                <h3>Generate Internal FAQs</h3>
+              </IconButton>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="document-section document-section--faqs">
+        <h2 className="document-section__title">Appendix</h2>
+        <p className="document-section__description">Information and details referenced above should go in your appendix.</p>
+        <div className="ds-generate__container left-align">
+          <ul className="document-section__auto-add">
+            <li>
+              <IconButton className="prompt-btn" variant="contained" onClick={handleFaqClick}>
+                <img src={plus} className="generate-logo" alt="logo" />
+                <h3>Generate Internal FAQs</h3>
+              </IconButton>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
       {/* <div className="cardItem"><p>`${JSON.stringify(response, null, 2)}`</p></div> */}
     </>
   );
