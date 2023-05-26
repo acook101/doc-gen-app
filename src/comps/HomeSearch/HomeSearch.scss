@@ -14,7 +14,8 @@
 
   &__field {
     width: 600px;
-    padding: 15px 15px 15px 40px;
+    padding: 15px 15px 15px 45px;
+    font-size: 14px;
     border: 1px solid;
     border-radius: 8px;
     background: no-repeat 10px center url('../../images/ai-logo.png');
@@ -31,15 +32,22 @@
 
   &__item {
     float: left;
-    margin-right: 8px;
+    margin-right: 10px;
+    border-bottom: 1px solid #394451;
+    padding-bottom: 1px;
+    opacity: 1;
 
+    &:first-child {
+      border-bottom: none;
+    }
+    
     a {
       text-decoration: none;
-      color: black;
+      color: #394451;
 
       &:hover {
-        opacity: .8;
-        text-decoration: underline;
+        opacity: 0.8;
+        // text-decoration: underline;
       }
     }
   }

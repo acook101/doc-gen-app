@@ -60,7 +60,7 @@
   border: 1px solid rgba(0,0,0,0.1);
   padding: 10px 30px;
   text-align: start;
-  margin: 20px 40px;
+  margin: 20px 30px;
   flex-grow: 1;  
   border: 1px solid #D1D5DA;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -108,6 +108,76 @@
   margin-top: 20px;
 }
 
-.document-section {
+.ds-container__line {
+  height: 1px;
+  width: 100%;
+  background: rgba(0,0,0,0.1);
+}
+
+.document-section, .intro-prompt {
   margin-bottom: 60px;
 }
+
+.document-section__prompt-area {
+  display: flex;
+  min-height: 100px;
+  & div {
+    width: 95%;
+  }
+  & .ai-logo {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+  }
+}
+
+.document-section_text-field {
+  & div::before, div::after {
+    border-bottom: none!important;
+  }
+  & div {
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-weight: 500;
+    color: #394451;
+    font-size: 15px;
+  }
+}
+
+.ds-generate__container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  max-width: 95%;
+  margin: 0 auto;
+  & .generate-logo {
+    height: 20px;
+    width: 20px;
+  }
+  & h3 {
+    text-transform: none!important;
+    color: #3e5060;
+    margin-left: 10px;
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-weight: 500;
+  }
+
+}
+
+.prompt-btn {
+  background-color: white!important;
+  box-shadow: none!important;
+  min-width: 150px!important;
+}
+
+.left-align {
+  justify-content: flex-start;
+  margin: 0;
+  width: 100%;
+
+  & .prompt-btn {
+    min-width: 100px!important;
+    padding: 0;
+  }
+}
+

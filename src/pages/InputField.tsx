@@ -1,13 +1,19 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
+import IconButton from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import { generateDoc, generateFaq } from "../utils/process";
 import { BlockNoteView, useBlockNote } from "@blocknote/react";
 import { useEffect, useState } from "react";
 import { Block, BlockNoteEditor } from "@blocknote/core";
+import '../styles/shared.scss';
+import plus from '../images/plus.svg'
+import aiIcon from '../images/ai-icon.svg'
+
+
 
 export const InputField = () => {
-  const [state, setState] = React.useState("prompt");
+  const [state, setState] = React.useState("");
   // Stores the current Markdown content.
   const [markdown, setMarkdown] = useState<string>("");
 
@@ -56,31 +62,48 @@ export const InputField = () => {
 
       <div className="intro-prompt">
       <h2 className="document-section__title">What is your PRFAQ about?</h2>
-        <span>
-          <TextField
-            id="input"
-            sx={{ m: 1, width: "40ch" }}
-            variant="standard"
-            onChange={handleChange}
-            value={state}
-          >
-            {" "}
-          </TextField>
-        </span>
+        <div className="document-section__prompt-area">
+        {/* <img src={aiIcon} className="ai-logo" alt="logo" /> */}
+             <TextField
+              id="input"
+              className="document-section_text-field"
+              placeholder="Describe in a one-page document the project vision using customer-centric language." 
+              sx={{ m: 1, width: "40ch" }}
+              variant="standard"
+              color='secondary'
+              multiline={true}
+              onChange={handleChange}
+              value={state}
+            >
+              {" "}
+            </TextField>
+        </div>
       </div>
 
       <div className="document-section">
-        <Button variant="contained" onClick={handleClick}>
-          Get Context!
-        </Button>
+        <div className="ds-generate__container">
+          <div className="ds-container__line"></div>
+          <IconButton className="prompt-btn" variant="contained" onClick={handleClick}>
+          <img src={aiIcon} className="generate-logo" alt="logo" />
+          <h3>Generate</h3>
+          </IconButton>
+          <div className="ds-container__line"></div>
+        </div>
       </div>
       <div className="document-section">
         <h2 className="document-section__title">FAQs</h2>
-        <Button variant="contained" onClick={handleFaqClick}>
+        <div className="ds-generate__container left-align">
+          <IconButton className="prompt-btn" variant="contained" onClick={handleFaqClick}>
+          <img src={plus} className="generate-logo" alt="logo" />
+          <h3>Add FAQs</h3>
+          </IconButton>
+        </div>
+      </div>
+{/* 
+        <Button className="prompt-btn" variant="contained" onClick={handleFaqClick}>
           Get FAQ!
         </Button>
-        <br />
-      </div>
+        <br /> */}
       <BlockNoteView editor={editor} />
       {/* <div className="cardItem"><p>`${JSON.stringify(response, null, 2)}`</p></div> */}
     </>
